@@ -367,16 +367,6 @@ windows:LIBS += -lws2_32 -lshlwapi -lmswsock -lole32 -loleaut32 -luuid -lgdi32
 #LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread$$BOOST_THREAD_LIB_SUFFIX
 windows:LIBS += -lboost_chrono$$BOOST_LIB_SUFFIX
 
-
-LIBS += /opt/local/lib/db48/libdb_cxx-4.8.a
-LIBS += /opt/local/lib/libboost_system-mt.a
-LIBS += /opt/local/lib/libboost_filesystem-mt.a
-LIBS += /opt/local/lib/libboost_program_options-mt.a
-LIBS += /opt/local/lib/libboost_thread-mt.a
-LIBS += /opt/local/lib/libssl.a
-LIBS += /opt/local/lib/libcrypto.a
-LIBS += /usr/lib/libminiupnpc.a
-
 contains(RELEASE, 1) {
     !windows:!macx {
         # Linux: turn dynamic linking back on for c/c++ runtime libraries
